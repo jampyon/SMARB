@@ -1,0 +1,42 @@
+/* Box Model Hack */
+* {
+    box-sizing: border-box;
+}
+/******************************************
+/* BASE STYLES
+/*******************************************/
+header,
+footer {
+    width: 100%;
+}
+nav {
+    border: 2px solid black;
+}
+h1,
+h2 {
+    text-align: center;
+}
+h3 {
+    flex-basis: 100%;
+}
+section {
+    border: 2px solid black;
+    padding: 0 0 2% 0;
+    width: 50%;
+}
+/******************************************
+/* LAYOUT
+/*******************************************/
+.baseFlexContainer {
+    display: flex;
+    flex-flow: row wrap;
+}
+li {
+    width: auto;
+    margin: auto;
+    justify-content: space-between;
+    list-style: none;
+}
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
