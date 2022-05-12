@@ -7,96 +7,99 @@
     <title>S.M.A.R.B.</title>
     <link href="css/style.css" rel="stylesheet">
 </head>
-<body>
+<body class="gridContainer">
+  <header>
+    <h1>S.M.A.R.B.</h1>
+    <h2>Super Mega Awesome Routine Builder</h2>
+    <nav>
+      <ul>
+        <li>
+          <a href="login.html">Login</a>
+        </li>
+        <li>
+          <a href="index.html">Home</a>
+        </li>
+        <li>
+          <a href="programs.html">Programs</a>
+        </li>
+        <li>
+          <a href="about.html">About</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <!--Converter-->
+  <section>
     <header>
-        <h1>S.M.A.R.B.</h1>
-        <h2>Super Mega Awesome Routine Builder</h2>
-        <nav>
-          <ul class="baseFlexContainer">
-            <li>
-            <a href="login.html">Login</a>
-            </li>
-            <li>
-              <a href="index.html">Home</a>
-            </li>
-            <li>
-              <a href="programs.html">Programs</a>
-            </li>
-            <li>
-              <a href="about.html">About</a>
-            </li>
-          </ul>
-        </nav>
+      <h3>Converter</h3>
     </header>
+    <select name="unitMassTypeConverter">
+      <option value="pounds">Pounds</option>
+      <option value="kilograms">Kilograms</option>
+    </select>
+    <form>
+      <input type="number" name="converterUserInput" placeholder="Pounds to Kilograms">
+    </form>
+    <button>Convert to Kilograms</button>
+  </section>
+  <!--Maxes-->
+  <section>
+    <header>
+      <h3>Maxes</h3>
+    </header>
+    <form>
+      <label for="bench">Bench</label>
+      <input type="number" id="bench" name="maxes">
+      <label for="squat">Squat</label>
+      <input type="number" id="squat" name="maxes">
+      <label for="deadlift">Deadlift</label>
+      <input type="number" id="deadlift" name="maxes">
+      <label for="ohp">Overhead Press</label>
+      <input type="number" id="ohp" name="maxes">
+    </form>
+  </section>
+  <!--Days-->
+  <section>
+    <header>
+      <h3>Days</h3>
+    </header>
+    <form>
+      <label for="sun">Sunday</label>
+      <input type="checkbox" name="days" id="sun" value="Sunday"> <!--Why does this need name? And does name and id need the same value?-->
+      <label for="mon">Monday</label>
+      <input type="checkbox" name="days" id="mon" value="Monday">
+      <label for="tues">Tuesday</label>
+      <input type="checkbox" name="days" id="tues" value="Tuesday">
+      <label for="wed">Wednesday</label>
+      <input type="checkbox" name="days" id="wed" value="Wednesday">
+      <label for="thurs">Thursday</label>
+      <input type="checkbox" name="days" id="thurs" value="Thursday">
+      <label for="fri">Friday</label>
+      <input type="checkbox" name="days" id="fri" value="Friday">
+      <label for="sat">Saturday</label>
+      <input type="checkbox" name="days" id="sat" value="Saturday">
+    </form>
+  </section>
+  <!--Lifts-->
+  <section>
+    <header>
+      <h3>Lifts</h3>
+    </header>
+    <form>
+      <input type="text" name="lifts" placeholder="Type your lift here">
+      <input type="number" name="sets" placeholder="# of Sets">
+      <input type="number" name="reps" placeholder="# of Reps">
+      <select>
+        <option value="">Increase/Decrease by %</option>
+        <option value="2.5%">2.5%</option>
+        <option value="5%">5%</option>
+        <option value="10%">10%</option>
+      </select>
+    </form>
+    <button>Add another lift</button>
+  </section>
+  <button class="button--style">Compile</button>
 
-    <section class="baseFlexContainer">
-        <h3>Converter:</h3>
-        <select name="poundKgConverter">
-          <option value="pounds">Pounds</option>
-          <option value="kg">Kilograms</option>
-        </select>
-        <form class="baseFlexContainer">
-          <input type="number" name="convertInput" id="convertInput" placeholder="Pounds to Kilograms"></input>
-        </form>
-        <button>Convert</button>
-    </section>
-
-    <section class="baseFlexContainer">
-        <h3>Maxes:</h3>
-        <form>
-          <label for="bench">Bench</label>
-          <input type="number" name="maxes" id="bench"></input>
-          <label for="squat">Squat</label>
-          <input type="number" name="maxes" id="squat"></input>
-          <label for="deadlift">Deadlift</label>
-          <input type="number" name="maxes" id="deadlift"></input>
-          <label for="ohp">Overhead Press</label>
-          <input type="number" name="maxes" id="ohp"></input>
-        </form>
-    </section>
-
-    <section class="baseFlexContainer">
-        <h3>Days:</h3>
-        <form>
-          <input type="checkbox" name="days" id="sun" value="Sunday"></input>
-          <label for="sun">Sunday</label>
-          <input type="checkbox" name="days" id="mon" value="Monday"></input>
-          <label for="mon">Monday</label>
-          <input type="checkbox" name="days" id="tues" value="Tuesday"></input>
-          <label for="tues">Tuesday</label>
-          <input type="checkbox" name="days" id="wed" value="Wednesday"></input>
-          <label for="wed">Wednesday</label>
-          <input type="checkbox" name="days" id="thur" value="Thursday"></input>
-          <label for="thur">Thursday</label>
-          <input type="checkbox" name="days" id="fri" value="Friday"></input>
-          <label for="fri">Friday</label>
-          <input type="checkbox" name="days" id="sat" value="Saturday"></input>
-          <label for="sat">Saturday</label>
-          <!--IDK if Forms are symantic for this specific input.-->
-        </form>
-    </section>
-
-    <section class="baseFlexContainer">
-        <h3>Lifts:</h3>
-        <form>
-          <input type="text" name="lifts" placeholder="Type your lift here"></input>
-          <input type="text" name="sets" placeholder="# of Sets"></input>
-          <input type="text" name="reps" placeholder="# of Reps"></input>
-          <select name="percentagesIncreaseOrDecrease">
-            <option value="">Raise by...%?</option>
-            <option value="2.5%">2.5%</option>
-            <option value="5%">5%</option>
-            <option value="10%">10%</option>
-          </select>
-        </form>
-        <button>Add another lift</button>
-    </section>
-    <button>Compile Your Routine</button>
-
-    <footer>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum alias aut ab quia nobis minus, deleniti facilis laboriosam pariatur ipsum laudantium, voluptas in? Velit repellat reiciendis excepturi accusamus eaque adipisci ullam voluptates.</p>
-    </footer>
-
-    <script type="text/javascript" src="js/main.js"></script>
+  <script type="text/javascript" src="js/main.js"></script>
 </body>
 </html>
