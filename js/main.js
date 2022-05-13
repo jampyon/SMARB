@@ -20,7 +20,7 @@ function testFunction() {
     //Above changes button text.
 }
 
-document.getElementById('compButton').addEventListener('click', toBeUpdated);
+document.getElementsByClassName('toBeUpdated').addEventListener('click', toBeUpdated);
 function toBeUpdated() {
     alert("Nah, son, not yet.")
 }
