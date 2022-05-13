@@ -8,6 +8,7 @@
 //     numTest = testTestNum / 2;
 //     outputCalc.innerHTML = numTest;
 // }
+//Can't figure out how to do the calc. JS funct. won't read user input as a num.
 
 const massTypeTextChange = document.getElementById('massTypeConverter');
 
@@ -20,7 +21,11 @@ function testFunction() {
     //Above changes button text.
 }
 
-document.getElementsByClassName('toBeUpdated').addEventListener('click', toBeUpdated);
-function toBeUpdated() {
-    alert("Nah, son, not yet.")
-}
+Array.from(document.getElementsByClassName('toBeUpdated'))
+    .forEach(function(element) {
+        element.addEventListener('click', function(){
+            alert("Nah, son, not yet. Also, IDK why the compile button isn't included in the alert list.");
+        })
+    }) //Adds an event listener to each class elem. by converting elems. into an array.
+        //Don't know why compile button isn't included in this.
+        //Pieced it together from (https://stackoverflow.com/questions/56763768/is-there-any-way-to-add-an-event-listener-to-a-class)
