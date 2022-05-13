@@ -33,14 +33,17 @@
     <header>
       <h3>Converter</h3>
     </header>
-    <select name="unitMassTypeConverter">
+    <select name="unitMassTypeConverter" id="massTypeConverter">
       <option value="pounds">Pounds</option>
-      <option value="kilograms">Kilograms</option>
+      <option value="kilograms" id="optionKilograms">Kilograms</option>
     </select>
     <form>
-      <input type="number" name="converterUserInput" placeholder="Pounds to Kilograms">
+      <input type="number" name="converterUserInput" placeholder="Pounds to Kilograms" id="whyNoReadNum">
     </form>
-    <button>Convert to Kilograms</button>
+    <button id="convertButton">Convert to Kilograms</button>
+    <h3>
+      Result: <span id="placeToPutConversion"></span>
+    </h3>
   </section>
   <!--Maxes-->
   <section>
