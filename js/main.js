@@ -19,3 +19,8 @@ function testFunction() {
     document.querySelector('#convertButton').textContent = 'Convert to Pounds';
     //Above changes button text.
 }
+
+document.getElementById('compButton').addEventListener('click', toBeUpdated);
+function toBeUpdated() {
+    alert("Nah, son, not yet.")
+}
